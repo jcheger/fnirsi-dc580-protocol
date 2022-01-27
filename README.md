@@ -4,6 +4,8 @@
 
 Hacked serial protocol for FNIRSI DC-580. See Python example, and below for frames decoding.
 
+Also give a look at iordi's project. who is working on a Java GUI: https://github.com/iordic/jdcx/wiki/Serial-communication
+
 ## Product description
 
 ![](images/dc580-1.jpg) ![](images/dc580-2.jpg)
@@ -39,11 +41,13 @@ Remarks
 | OHP_H         |      | H*xx*   | ex. H01                                                      |
 | OHP_M         |      | M*xx*   | ex. M02                                                      |
 | OHP_S         |      | S*xx*   | ex. S03                                                      |
-| OK            | 5A   | Z       | exits from protection                                        |
+| OK            | 5A   | Z       | reset status flag (exits from protection)                    |
 | enable        | 4E   | N       | switch ON                                                    |
 | disable       | 46   | F       | switch OFF                                                   |
 | M1            | 4F   | O       |                                                              |
 | M2            | 50   | P       |                                                              |
+|               |      | X       | enable time protection                                       |
+|               |      | Y       | disable time protection                                      |
 
 ### read
 
@@ -79,4 +83,5 @@ ex. **0499**A**0104**A**0051**A**0**A**028**A**0**A**0**A
 
 * http://www.fnirsi.cn/productinfo/481353.html
 * https://www.aliexpress.com/item/4000424191711.html?spm=a2g0s.9042311.0.0.27424c4dKSFzAb
+* https://github.com/iordic/jdcx/wiki/Serial-communication
 
